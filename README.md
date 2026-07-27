@@ -257,28 +257,33 @@ The probabilistic policy increased stock and waste but substantially reduced los
 ## Repository structure
 
 ```text
+## Repository structure
+
+```text
 retail-decision-intelligence/
-‚îú‚îÄ‚îÄ README.md
-‚îú‚îÄ‚îÄ requirements.txt
-‚îú‚îÄ‚îÄ assets/
-‚îÇ   ‚îú‚îÄ‚îÄ retail_decision_intelligence_infographic_design.png
-‚îÇ   ‚îî‚îÄ‚îÄ figures_montage.png
-‚îú‚îÄ‚îÄ notebooks/
-‚îÇ   ‚îî‚îÄ‚îÄ Retail_Decision_Intelligence.ipynb
-‚îú‚îÄ‚îÄ manuscript/
-‚îÇ   ‚îî‚îÄ‚îÄ Retail_Decision_Intelligence_Full_Manuscript.docx
-‚îú‚îÄ‚îÄ outputs/
-‚îÇ   ‚îú‚îÄ‚îÄ synthetic_retail_panel.csv
-‚îÇ   ‚îú‚îÄ‚îÄ executive_scorecard.csv
-‚îÇ   ‚îú‚îÄ‚îÄ forecast_metrics.csv
-‚îÇ   ‚îú‚îÄ‚îÄ segment_performance.csv
-‚îÇ   ‚îú‚îÄ‚îÄ substitution_policy_results.csv
-‚îÇ   ‚îú‚îÄ‚îÄ inventory_policy_results.csv
-‚îÇ   ‚îú‚îÄ‚îÄ simulation_metadata.json
-‚îÇ   ‚îî‚îÄ‚îÄ 01_daily_demand.png ... 13_inventory_outcomes.png
-‚îî‚îÄ‚îÄ src/
-    ‚îú‚îÄ‚îÄ build_retail_notebook.py
-    ‚îî‚îÄ‚îÄ create_retail_manuscript.py
+├── README.md
+├── requirements.txt
+├── assets/
+│   ├── retail_decision_intelligence_infographic_design.png
+│   └── figures_montage.png
+├── notebooks/
+│   └── Retail_Decision_Intelligence.ipynb
+├── manuscript/
+│   └── Retail_Decision_Intelligence_Full_Manuscript.docx
+├── outputs/
+│   ├── synthetic_retail_panel.csv
+│   ├── executive_scorecard.csv
+│   ├── forecast_metrics.csv
+│   ├── segment_performance.csv
+│   ├── substitution_policy_results.csv
+│   ├── inventory_policy_results.csv
+│   ├── simulation_metadata.json
+│   └── 01_daily_demand.png ... 13_inventory_outcomes.png
+└── src/
+    ├── build_retail_notebook.py
+    └── create_retail_manuscript.py
+```
+
 ```
 
 ## Getting started
