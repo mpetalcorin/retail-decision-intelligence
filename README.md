@@ -135,19 +135,20 @@ Representative features include:
 
 Three forecasting strategies are compared:
 
-- **Seasonal naive:** predicted demand equals sales from the same weekday one week earlier.
-- **Observed-sales LightGBM:** a global model trained directly on observed sales.
-- **Demand-corrected LightGBM:** a global model trained on a transparent stockout-day demand proxy.
+* **Seasonal naive:** predicted demand equals sales from the same weekday one week earlier.
+* **Observed-sales LightGBM:** a global model trained directly on observed sales.
+* **Demand-corrected LightGBM:** a global model trained using a transparent demand proxy for stockout days.
 
-The simulated latent demand is retained only as an evaluation target. This makes it possible to quantify error and bias introduced by censored sales.
+Simulated latent demand is retained only as an evaluation target. This enables the error and bias caused by censored sales to be quantified.
 
-Forecast evaluation includes:
+Forecast performance is evaluated using:
 
-\[
-\mathrm{WAPE}=\frac{\sum_i |y_i-\hat{y}_i|}{\sum_i y_i},
-\]
+**WAPE = Σᵢ |yᵢ − ŷᵢ| ÷ Σᵢ yᵢ,**
 
-along with mean absolute error, root mean squared error, bias, and root mean squared logarithmic error.
+where **yᵢ** is the true latent demand for observation **i**, and **ŷᵢ** is the corresponding predicted demand.
+
+Additional evaluation measures include mean absolute error, root mean squared error, forecast bias, and root mean squared logarithmic error.
+
 
 ### 3. Probabilistic forecasting
 
@@ -188,29 +189,28 @@ The model selects one top-ranked candidate per event and is compared with closes
 
 ### 7. Promotion-effect estimation
 
-A difference-in-differences model compares the plant-based category with control categories around a simulated January campaign:
+A difference-in-differences model compares the plant-based category with control categories before and after a simulated January campaign:
 
-\[
-\log(1+Y_{sct})=\beta_0+\beta_1T_c+\beta_2P_t+\beta_3(T_cP_t)
-+\alpha_s+\gamma_t+\varepsilon_{sct},
-\]
+**log(1 + Yₛ꜀ₜ) = β₀ + β₁T꜀ + β₂Pₜ + β₃(T꜀Pₜ) + αₛ + γₜ + εₛ꜀ₜ,**
 
-where \(T_c\) identifies the treated category, \(P_t\) identifies the post-campaign period, \(\alpha_s\) represents store fixed effects, and \(\gamma_t\) represents week fixed effects. Heteroskedasticity-consistent HC3 standard errors are used.
+where **T꜀** identifies the treated category, **Pₜ** identifies the post-campaign period, **αₛ** represents store fixed effects, **γₜ** represents week fixed effects, and **εₛ꜀ₜ** is the residual error term.
+
+The interaction coefficient **β₃** estimates the campaign-associated change in the treated category relative to the contemporaneous change observed in the control categories. Heteroskedasticity-consistent HC3 standard errors are used.
+
 
 ### 8. Inventory optimisation
 
-Two policies are compared:
+Two inventory policies are compared:
 
-- **Seasonal-naive policy:** last-week demand plus a simple safety buffer.
-- **Probabilistic ML policy:** the estimated 90th demand quantile.
+* **Seasonal-naive policy:** demand from the previous week plus a simple safety-stock buffer.
+* **Probabilistic machine-learning policy:** the estimated 90th percentile of the demand distribution.
 
 The decision layer evaluates service level, lost units, waste units, retained-margin proxy, average stock, and total decision cost:
 
-\[
-C=c_L L+c_W W,
-\]
+**C = cᴸL + cᵂW,**
 
-where \(L\) represents lost units, \(W\) represents waste units, and the penalties vary with product perishability and commercial assumptions.
+where **L** represents lost units, **W** represents waste units, **cᴸ** is the unit penalty associated with lost sales, and **cᵂ** is the unit penalty associated with waste. These penalties vary according to product perishability and the commercial assumptions used in the simulation.
+
 
 ## Model performance
 
