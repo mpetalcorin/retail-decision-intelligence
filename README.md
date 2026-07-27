@@ -425,7 +425,7 @@ BibTeX:
 **Mark I. R. Petalcorin**  
 Molecular biologist, biochemist, machine-learning and AI scientist  
 GitHub: [@mpetalcorin](https://github.com/mpetalcorin)  
-Portfolio: [a-aidea.com](https://a-aidea.com)
+[a-aidea.com](https://a-aidea.com)
 
 ## Responsible use
 
