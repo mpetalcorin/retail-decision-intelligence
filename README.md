@@ -94,13 +94,12 @@ Each row represents one product in one store on one day. Variables include produ
 
 The simulation separates customer demand from retailer fulfilment:
 
-\[
-Y_{spt}=\min(D_{spt}, I_{spt}),
-\]
+**Yₛₚₜ = min(Dₛₚₜ, Iₛₚₜ),**
 
-where \(D_{spt}\) is latent customer demand, \(I_{spt}\) is available inventory, and \(Y_{spt}\) is observed sales for store \(s\), product \(p\), and day \(t\).
+where **Dₛₚₜ** is latent customer demand, **Iₛₚₜ** is available inventory, and **Yₛₚₜ** is observed sales for store **s**, product **p**, and day **t**.
 
-When \(D_{spt}>I_{spt}\), observed sales are censored. A forecasting model trained only on \(Y_{spt}\) can therefore learn that suppressed sales represent weak demand, even though the true cause is insufficient stock. The notebook models latent demand using overdispersed count behaviour, calendar effects, product-store heterogeneity, price response, promotions, weather, campaigns, and random variation.
+When **Dₛₚₜ > Iₛₚₜ**, observed sales are censored. A forecasting model trained only on **Yₛₚₜ** can therefore learn that suppressed sales represent weak demand, even though the true cause is insufficient stock. The notebook models latent demand using overdispersed count behaviour, calendar effects, product–store heterogeneity, price response, promotions, weather, campaigns, and random variation.
+
 
 ### Systems-level mechanism
 
