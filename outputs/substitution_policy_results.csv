@@ -1,0 +1,4 @@
+Policy,Top-1 acceptance,Mean retained revenue
+ML attribute-aware,0.404,1.92748
+Closest price,0.27,1.34074
+Purchase-history heuristic,0.322,1.5106199999999999

@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "n_rows": 38880,
+  "n_stores": 4,
+  "n_products": 18,
+  "date_start": "2024-01-01",
+  "date_end": "2025-06-23",
+  "test_cutoff": "2025-04-29"
+}

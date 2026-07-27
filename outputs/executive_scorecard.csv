@@ -1,0 +1,9 @@
+Outcome,Value
+Forecast WAPE reduction vs seasonal naive,0.318482612741561
+Forecast bias of demand-corrected model,-0.9086844726308033
+90% prediction interval coverage,0.9384920634920635
+Stockout ROC-AUC,0.7467570953056772
+Substitution top-1 acceptance gain,0.134
+Estimated campaign uplift,0.47845889934365043
+Inventory decision-cost reduction,0.06930397497430615
+Inventory service-level change,0.29150324615718404
