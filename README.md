@@ -257,9 +257,7 @@ The probabilistic policy increased stock and waste but substantially reduced los
 ## Repository structure
 
 ```text
-## Repository structure
 
-```text
 retail-decision-intelligence/
 ├── README.md
 ├── requirements.txt
@@ -282,49 +280,9 @@ retail-decision-intelligence/
 └── src/
     ├── build_retail_notebook.py
     └── create_retail_manuscript.py
-```
 
 ```
 
-## Getting started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/mpetalcorin/retail-decision-intelligence.git
-cd retail-decision-intelligence
-```
-
-### 2. Create a virtual environment
-
-macOS or Linux:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
-
-```bash
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 4. Open the executed notebook
-
-```bash
-jupyter notebook notebooks/Retail_Decision_Intelligence.ipynb
-```
-
-Run **Kernel ‚Üí Restart Kernel and Run All Cells** to reproduce the analysis.
 
 ## Reproducibility
 
