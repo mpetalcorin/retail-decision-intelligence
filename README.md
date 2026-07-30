@@ -282,7 +282,6 @@ retail-decision-intelligence/
 
 ```
 
-
 ## Reproducibility
 
 The notebook uses a fixed NumPy random seed of `42`. It writes generated artefacts to an output directory during execution. The committed `outputs/` directory contains the reference results used in the manuscript and this README.
@@ -317,12 +316,6 @@ The notebook produces thirteen visual analyses:
 11. substitution tier-transition matrix;
 12. campaign difference-in-differences visualisation;
 13. normalised inventory-policy outcomes.
-
-A journal-style manuscript with embedded figures, complete methods, discussion, peer-reviewed references, and supplementary tables is available at:
-
-```text
-manuscript/Retail_Decision_Intelligence_Full_Manuscript.docx
-```
 
 ## Scientific and operational interpretation
 
